@@ -1,4 +1,4 @@
-algoritmo "quadrado"
+algoritmo "quadrado_area"
 var
 l, a, p : real
 
