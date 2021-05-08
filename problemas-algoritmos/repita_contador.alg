@@ -1,5 +1,4 @@
 algoritmo "repita_contador"
-
 var
  num, cont : inteiro
 
