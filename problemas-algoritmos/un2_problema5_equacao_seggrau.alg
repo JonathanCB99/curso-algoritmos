@@ -1,7 +1,6 @@
 algoritmo "equacao_segundograu"
-var
-a, b, c, delta, x, x1, x2 : real
-
+ var
+ a, b, c, delta, x, x1, x2 : real
 inicio
  Escreva("Digite o valor de a: ")
  leia(a)
@@ -12,7 +11,6 @@ inicio
  // calcula valor de delta
  delta <- (b^2-4)*a*c
  escreval("Valor de delta: ",delta)
-
  // verifica se a = 0
   se (a = 0)entao
   faca
@@ -30,7 +28,6 @@ inicio
        x2 <- (-b-Raizq(delta))/2*a
        escreva("Valor de x1: ",x1)
        escreva("Valor de x2: ",x2)
-
        senao
        // calcula o valor de x caso delta = 0
         se (delta = 0)entao
