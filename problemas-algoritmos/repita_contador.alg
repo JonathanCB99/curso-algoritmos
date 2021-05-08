@@ -14,5 +14,4 @@ var
    Fimse
   Ate (num = 0)
   Escreva("A quantidade de números entre 100 e 300 é: ", cont)
-
  fimalgoritmo
