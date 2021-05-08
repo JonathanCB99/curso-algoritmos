@@ -24,7 +24,7 @@ inicio
      Escreva(" Não existe raíz real para delta ")
       senao
       // caso delta > 0 calcula o valor de x1 e x2 caso
-       se(delta > 0)entao
+      se(delta > 0)entao
        faca
        x1 <- (-b+Raizq(delta))/2*a
        x2 <- (-b-Raizq(delta))/2*a
@@ -41,7 +41,4 @@ inicio
        fimse
    fimse
   fimse
-  
-
-
 fimalgoritmo
