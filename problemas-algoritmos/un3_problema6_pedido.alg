@@ -1,7 +1,7 @@
 algoritmo "pedido"
 var
  nped, dia, mes, ano, qt : inteiro
- precun, totped, total : real
+ precun, total : real
 
 inicio
  Escreva(" Informe o número do pedido: ")
@@ -18,11 +18,10 @@ inicio
    leia(precun)
   Escreva(" Informe a quantidade: ")
    leia(qt)
-   totped <- qt*precun
-   total <- total + totped
+   total <- total + qt*precun
     Escreval("             ")
     Escreval("NÚMERO DO PEDIDO:",nped,". data:",dia,"/",mes,"/",ano)
-    Escreval("Total do pedido: R$",totped)
+    Escreval("Total do pedido: R$",qt*precun)
     Escreval("             ")
     Escreva(" Informe o número do pedido: ")
     leia(nped)
