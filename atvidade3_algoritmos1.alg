@@ -23,7 +23,7 @@ inicio
    soma <- 0 // limpa a váriavel soma para o próximo
    
   // verifica o status
-   Se (media < 4.9) entao
+   Se (media <= 4.9) entao
    EscrevaL("REPROVADO")
    Senao
      Se (media >= 5) E (media <= 6.9) entao
