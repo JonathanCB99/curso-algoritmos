@@ -1,0 +1,23 @@
+Algoritmo a1_algp1
+
+Var
+   r, area, menorArea : real
+   num, cont, posMenor : inteiro
+Início
+  Escreva("Digite quantos raios de círculos deseja calcular: ")
+  Leia(num)
+   Para cont de 1 até num faça
+       Escreva("Digite o raio do ", cont,"° círculo: ")
+       Leia(r)
+
+     area <- pi*(r*r)
+     Escreval("Área: ",area)
+     
+    Se (area <= menorArea) ou (menorArea = 0) então
+       menorArea <- area
+       posMenor <- cont
+    Fim_se
+   Fim_para
+
+      Escreval("Círculo com menor área: ", posMenor, "° círculo com área total de ",menorArea)
+Fim
