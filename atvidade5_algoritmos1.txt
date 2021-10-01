@@ -1,0 +1,69 @@
+programa{
+   funcao inicio() {
+        cadeia carteira[] = { "CDB", "Acoes", "Fundos Imobiliarios", "Stocks", "Reits"}
+        inteiro percentual[5] // % percentual que quero investir
+        inteiro percentualAtual[5] // % percentual já investido
+        real valoresAplicados[5] // quantidade de R$ já investido
+        inteiro somaPercentual = 0
+        inteiro somaInvestimento = 0
+        inteiro diferenca[5] // percentual - percentualAtual
+        inteiro maiorNum = 0
+        cadeia disparidade = ""
+        
+        escreva("------Passo 1---------\n")
+        escreva("------Valores Percentuais---------\n")
+        
+        enquanto(somaPercentual != 100){
+            para(inteiro pos = 0; pos < 5; pos++){
+                escreva("Informe a porcentagem para investir em " + carteira[pos] + ": ") 
+                leia(percentual[pos])
+                somaPercentual = somaPercentual + percentual[pos]
+            }
+            
+            se(somaPercentual != 100){
+                escreva("A soma percentual é diferente de 100%, insira novamente. \n")
+                somaPercentual = 0
+            }
+            
+        }
+        
+        escreva("------Passo 2---------\n")
+        escreva("------Valores em R$---------\n")
+        
+         para(inteiro pos = 0; pos < 5; pos++){
+            escreva("Informe o valor investido atualmente em  " + carteira[pos] + ": R$ ") 
+            leia(valoresAplicados[pos])
+            somaInvestimento = somaInvestimento + valoresAplicados[pos]
+        }
+        
+        para (inteiro pos = 0; pos < 5; pos++){
+            percentualAtual[pos] = (valoresAplicados[pos] * 100) / somaInvestimento
+            
+        }
+        
+        escreva("------Passo 3---------\n")
+        escreva("------Imprime os valores---------\n")
+        para(inteiro pos = 0; pos < 5; pos++){
+            escreva("\nValor pretendido em " + carteira[pos] + " : " + percentual[pos])
+            escreva("\nO valor já investido em " + carteira[pos] + " é de: " + percentualAtual[pos])
+            
+            se(percentual[pos] > percentualAtual[pos]){
+                diferenca[pos] = percentual[pos] - percentualAtual[pos]
+            }
+            senao {
+                diferenca[pos] = percentualAtual[pos] - percentual[pos]
+            }
+            
+            se(diferenca[pos] > maiorNum) {
+                maiorNum = diferenca[pos]
+                disparidade = carteira[pos]
+            }
+            
+        }
+        escreva("\n------Passo 4---------")
+        escreva("\nA maior diferença está no ativo " + disparidade + " com " + maiorNum + " % de diferença")
+ 
+        
+   }
+   
+}
